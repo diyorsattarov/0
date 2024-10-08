@@ -1,16 +1,16 @@
 #pragma once
-class Int4MMH {
+class B {
 public:
-    int i;
-    Int4MMH() : i(0) {}
-    Int4MMH(int n) : i(n) {}    
-    friend int compare(const Int4MMH &c1, const Int4MMH &c2);
+    int a;
+    B() : a(0) {}
+    B(int n) : a(n) {}    
+    friend int c(const B &b1, const B &b2);
 };
 
-int compare(const Int4MMH &c1, const Int4MMH &c2) {
-    if (c1.i < c2.i)
+int c(const B &b1, const B &b2) {
+    if (b1.a < b2.a)
         return -1;
-    if (c1.i > c2.i)
+    if (b1.a > b2.a)
         return 1;
     return 0;
 }
